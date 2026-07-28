@@ -617,7 +617,7 @@ function startHeartField(){
 
   const hearts = [];
   const SEGMENTS = 40;
-  const MAX_CONCURRENT = 16;
+  const MAX_CONCURRENT = 25;
 
   function spawnFloatingHeart() {
     const maxScale = 1.0 + Math.random() * 1.6;
@@ -682,7 +682,7 @@ function startHeartField(){
       ctx.closePath();
       ctx.shadowColor = `rgba(255, 110, 180, ${a})`;
       ctx.shadowBlur = 8;
-      ctx.lineWidth = 1.4;
+      ctx.lineWidth = 2.4;
       ctx.strokeStyle = `hsla(330, 100%, 74%, ${a})`;
       ctx.stroke();
       ctx.shadowBlur = 0;

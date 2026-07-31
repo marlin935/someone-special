@@ -377,9 +377,6 @@ function showMessages() {
   }
 }
 
-button.style.display = "none";
-showMessages();
-
 function openEnvelope(){
   startHeartField();
   const envelope = document.getElementById("envelope");
@@ -394,12 +391,16 @@ function openEnvelope(){
     container.classList.add("hide");
   },900);
 
-  setTimeout(()=>{
-    container.style.display="none";
-    document.querySelector(".card").style.display="block";
+ setTimeout(() => {
+    container.style.display = "none";
+    card.style.display = "block";
+
+    button.style.display = "none";
+    current = 0;
+    showMessages();
+
     hint.style.display = "none";
-  },1500);
-}
+}, 1500);
 function startLove() {
   card.style.transition = "0.8s";
   card.style.opacity = "0";

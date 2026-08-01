@@ -430,41 +430,32 @@ function startLove() {
   }, 800);
 }
 
-  function showPoetry(){
+    function showPoetry(){
+    card.style.opacity="0";
+    
+      setTimeout(()=>{
 
-card.style.opacity="0";
+        card.innerHTML=
+          <video class="character" autoplay muted loop playsinline>
+          <source src="poetry.mp4" type="video/mp4">
+          </video>
 
-setTimeout(()=>{
+         <h1>Something I Admire ❤️</h1>
+         <p style="margin-top:20px">
 
-card.innerHTML=
+        "I love how passionate you are about writing.<br>
+         "I'd honestly love to read your poetry sometime,<br>
+          "if you're comfortable sharing. ✨
+          </p>
 
-<video class="character" autoplay muted loop playsinline>
-<source src="poetry.mp4" type="video/mp4">
-</video>
-
-<h1>Something I Admire ❤️</h1>
-
-<p style="margin-top:20px">
-
-I love how passionate you are about writing.<br><br>
-
-I'd honestly love to read your poetry sometime,
-if you're comfortable sharing. ✨
-
-</p>
-
-<button onclick="showQuestion()">
-
-Continue ❤️
-
-</button>
-
-;
+          <button onclick="showQuestion()">
+           Continue ❤️
+            </button>
+          ;
 
 card.style.opacity="1";
 
-},700);
-
+ },700);
 }
   
 function showQuestion() {

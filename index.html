@@ -420,8 +420,8 @@ function startLove() {
         Every time we talk, you make my day brighter.
       </p>
 
-      <button onclick="showQuestion()">
-        Continue ❤️
+      <button onclick="showPoetry()">
+      Continue ❤️
       </button>
     `;
 
@@ -430,6 +430,43 @@ function startLove() {
   }, 800);
 }
 
+  function showPoetry(){
+
+card.style.opacity="0";
+
+setTimeout(()=>{
+
+card.innerHTML=
+
+<video class="character" autoplay muted loop playsinline>
+<source src="poetry.mp4" type="video/mp4">
+</video>
+
+<h1>Something I Admire ❤️</h1>
+
+<p style="margin-top:20px">
+
+I love how passionate you are about writing.<br><br>
+
+I'd honestly love to read your poetry sometime,
+if you're comfortable sharing. ✨
+
+</p>
+
+<button onclick="showQuestion()">
+
+Continue ❤️
+
+</button>
+
+;
+
+card.style.opacity="1";
+
+},700);
+
+}
+  
 function showQuestion() {
   card.style.opacity = "0";
 

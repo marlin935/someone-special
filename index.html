@@ -4,7 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For Someone Special ❤️</title>
-
+ 
+  <link rel="stylesheet" href="style.css">
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
 <style>
 *{
 margin:0;
@@ -304,11 +313,17 @@ height:100%;
 z-index:0;
 pointer-events:none;
 }
+#container, .glow{
+  display:none;
+  z-index:10000;
+}
 </style>
 
 </head>
 
 <body>
+<div id="container"></div>
+<div class="glow"></div>
 <canvas id="heart-particles-bg"></canvas>
 <div id="envelopeContainer">
   <div id="envelope" onclick="openEnvelope()">

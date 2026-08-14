@@ -571,10 +571,22 @@ i++;
 
 setTimeout(type,50);
 
-}
+}else{
+
+setTimeout(()=>{
+card.style.transition="0.8s";
+card.style.opacity="0";
+setTimeout(()=>{
+card.style.display="none";
+card.innerHTML="";
+stopHeartField();
+window.startCosmicFinale();
+},800);
+},2500);
 
 }
 
+}
 type();
 
 },700);
@@ -637,6 +649,13 @@ document.body.appendChild(heart);
 setTimeout(()=>heart.remove(),10000);
 }
 let heartFieldStarted = false;
+let heartFieldRunning = true;
+
+function stopHeartField(){
+  heartFieldRunning = false;
+  const canvas = document.getElementById('heart-particles-bg');
+  if (canvas) canvas.style.display = 'none';
+}
 
 function startHeartField(){
   if (heartFieldStarted) return;
@@ -694,9 +713,9 @@ function startHeartField(){
   let nextSpawnAt = 0;
 
   function animate() {
+    if (!heartFieldRunning) return;
     frame++;
     ctx.clearRect(0, 0, w, h);
-
     if (frame > nextSpawnAt && hearts.length < MAX_CONCURRENT) {
       spawnFloatingHeart();
       nextSpawnAt = frame + 15 + Math.random() * 15;

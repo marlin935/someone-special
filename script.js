@@ -26,7 +26,16 @@ const themes = {
   }
 };
 
-document.addEventListener('DOMContentLoaded', init);
+let cosmicStarted = false;
+window.startCosmicFinale = function () {
+  if (cosmicStarted) return;
+  cosmicStarted = true;
+  const cosmicBox = document.getElementById('container');
+  const cosmicGlow = document.querySelector('.glow');
+  if (cosmicBox) cosmicBox.style.display = 'block';
+  if (cosmicGlow) cosmicGlow.style.display = 'block';
+  init();
+};
 
 function createHeartPath(particleIndex, totalParticles) {
   const t = (particleIndex / totalParticles) * Math.PI * 2;

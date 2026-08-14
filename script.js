@@ -282,7 +282,7 @@ function animateParticles() {
   const particleSizes = particles.geometry.attributes.size.array;
   const disintegrationOffsets = particles.geometry.attributes.disintegrationOffset.array;
 
-  const disintegrationCycleTime = 20.0;
+  const disintegrationCycleTime = 15.0;
   const shapeIndex = Math.floor((time * 0.6) / disintegrationCycleTime) % 2;
   const homePositions = shapeIndex === 0 ? heartPositions : textPositions;
 

@@ -340,7 +340,7 @@ pointer-events:none;
 <div class="card" style="display:none;">
 
 <video class="character" autoplay muted loop playsinline>
-    <source src="media_1783707211476.mp4" type="video/mp4">
+    <source src="media_1787148015493.mp4" type="video/mp4">
 </video>
 
   <h1>For Someone Special 💖</h1>
@@ -432,7 +432,10 @@ function startLove() {
 
       <h1>I Really Like You ❤️</h1>
       <p style="margin-top:20px">
-        Every time we talk, you make my day brighter.
+        I really do love hearing about your day <br>
+        whatever happened the good things, the bad things, and even the little random things.<br>
+        I just love listening to you and knowing how your day went.<br>
+        Honestly talking to you always makes my day a little better.
       </p>
 
       <button onclick="showPoetry()">
@@ -458,12 +461,12 @@ function startLove() {
          <h1>Something I Admire ❤️</h1>
          <p style="margin-top:20px">
 
-        "I love how passionate you are about writing.<br>
-         "I'd honestly love to read your poetry sometime,<br>
-          "if you're comfortable sharing. ✨
+        I love how passionate you are about writing.<br>
+        I'd honestly love to read your poetry sometime,<br>
+        if you're comfortable sharing. ✨
           </p>
 
-          <button onclick="showQuestion()">
+          <button onclick="showGnm()">
            Continue ❤️
             </button>
     `;
@@ -472,7 +475,32 @@ card.style.opacity="1";
 
  },700);
 }
-  
+  function showGnm() {
+  card.style.opacity = "0";
+
+  setTimeout(() => {
+
+    card.innerHTML = `
+      <video class="character" autoplay muted loop playsinline>
+        <source src="media_1784013409265.mp4" type="video/mp4">
+      </video>
+
+      <h1>Something I Admire ❤️</h1>
+
+      <p style="margin-top:20px">
+       I worry sometimes that I might be bothering or disturbing you. I'm so sorry if I did<br>
+       and I'll be careful not to do it again well!
+      </p>
+
+      <button onclick="showQuestion()">
+        Continue ❤️
+      </button>
+    `;
+
+    card.style.opacity = "1";
+
+  }, 700);
+}
 function showQuestion() {
   card.style.opacity = "0";
 
@@ -483,12 +511,12 @@ function showQuestion() {
     <source src="date.mp4" type="video/mp4">
 </video>
 
-      <h1>So.. ❤️</h1>
 
       <p style="margin-top:20px">
-      I was wondering...<br>
-      if you're free one day would you like to go out with me?<br>
-      I'd love to spend some time together in person.
+         I was wondering...<br>
+         if you're free one day, would you like to go out with me?<br>
+         I'd love to get to know your world a bit more and show you a bit of mine.<br> 
+         I'd love to spend some time together in person
       </p>
 
       <br>

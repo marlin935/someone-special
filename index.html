@@ -456,24 +456,24 @@ function startLove() {
     <source src="media_1787148015493.mp4" type="video/mp4">
 </video>
 
-      <h1>I Really Like You ❤️</h1>
-      <p style="margin-top:20px">
-        I really do love hearing about your day <br>
-        whatever happened the good things, the bad things, and even the little random things.<br>
-        I just love listening to you and knowing how your day went.<br>
-        Honestly talking to you always makes my day a little better.
-      </p>
+           <h1>I Really Like You ❤️</h1>
+      <p style="margin-top:20px" id="typing4"></p>
 
       <button onclick="showPoetry()">
       Continue ❤️
       </button>
     `;
 
-    card.style.opacity = "1";
+        card.style.opacity = "1";
     card.style.transform = "scale(1)";
-  }, 800);
-}
 
+    typeLines(document.getElementById("typing4"), [
+          "I really do love hearing about your day"
+        "whatever happened the good things, the bad things, and even the little random things."
+         "I just love listening to you and knowing how your day went."
+        "Honestly talking to you always makes my day a little better."
+    ]);
+  }, 800);
     function showPoetry(){
     card.style.opacity="0";
     

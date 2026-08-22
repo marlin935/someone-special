@@ -381,6 +381,32 @@ function typeMessage(text, callback) {
   type();
 }
 
+function typeLines(container, lines, speed = 50) {
+  container.innerHTML = "";
+  let lineIndex = 0;
+  let charIndex = 0;
+
+  function typeNextChar() {
+    if (lineIndex >= lines.length) return;
+
+    const currentLine = lines[lineIndex];
+
+    if (charIndex < currentLine.length) {
+      container.innerHTML += currentLine.charAt(charIndex);
+      charIndex++;
+      setTimeout(typeNextChar, speed);
+    } else {
+      if (lineIndex < lines.length - 1) {
+        container.innerHTML += "<br>";
+      }
+      lineIndex++;
+      charIndex = 0;
+      setTimeout(typeNextChar, speed);
+    }
+  }
+
+  typeNextChar();
+}
 function showMessages() {
   if (current < messages.length) {
     typeMessage(messages[current], () => {

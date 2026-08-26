@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For Someone Special ❤️</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
  
   <link rel="stylesheet" href="style.css">
 <script type="importmap">
@@ -96,6 +99,8 @@ color:white;
 margin-top:15px;
 font-size:30px;
 text-shadow:0 0 15px rgba(255,255,255,.7);
+font-family:'Playfair Display', serif;
+font-style:italic;
 }
 
 p{
@@ -103,8 +108,9 @@ margin-top:18px;
 color:white;
 font-size:18px;
 line-height:30px;
+font-family:'Playfair Display', serif;
+font-style:italic;
 }
-
 button{
 margin-top:30px;
 padding:15px 35px;
@@ -376,7 +382,7 @@ function typeMessage(text, callback) {
     if (i < text.length) {
       typing.innerHTML += text.charAt(i);
       i++;
-      setTimeout(type, 50);
+      setTimeout(type, 80);
     } else if (callback) {
       setTimeout(callback, 1000);
     }
@@ -385,7 +391,7 @@ function typeMessage(text, callback) {
   type();
 }
 
-function typeLines(container, lines, speed = 50) {
+function typeLines(container, lines, speed = 80) {
   container.innerHTML = "";
   let lineIndex = 0;
   let charIndex = 0;
@@ -637,7 +643,7 @@ document.getElementById("typing2").innerHTML+=msg.charAt(i);
 
 i++;
 
-setTimeout(type,50);
+setTimeout(type,80);
 
 }else{
 
@@ -694,7 +700,7 @@ document.getElementById("typing3").innerHTML+=msg.charAt(i);
 
 i++;
 
-setTimeout(type,50);
+setTimeout(type,80);
 
 }
 

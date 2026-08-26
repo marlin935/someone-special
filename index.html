@@ -547,15 +547,9 @@ function showQuestion() {
 </video>
 
 
-      <p style="margin-top:20px">
-         I was wondering...<br>
-         if you're free one day, would you like to go out with me?<br>
-         I'd love to get to know your world a bit more and show you a bit of mine.<br> 
-         I'd love to spend some time together in person
-      </p>
+            <h1>One Last Thing ❤️</h1>
 
-      <br>
-
+      <p style="margin-top:20px" id="typing7"></p>
       <button onclick="yesAnswer()">
       Yes ❤️
       </button>
@@ -565,13 +559,20 @@ function showQuestion() {
       </button>
     `;
 
-    card.style.opacity = "1";
+        card.style.opacity = "1";
+
+    typeLines(document.getElementById("typing7"), [
+      "if you're free one day, would you like to go out with me?",
+      "I'd love to get to know your world a bit more and", 
+      "show you a bit of mine.",
+      "I'd love to spend some time together in person."
+    ]);
 
   },700);
 }
-
+ 
 function createConfetti(){
-  const colors=["💐","🎊","🧸","💗","✨"];
+  const colors=["✨","💗","✨","💗","✨"];
   for(let i=0;i<120;i++){
     const c=document.createElement("div");
     c.className="confetti";

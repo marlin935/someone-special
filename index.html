@@ -325,6 +325,9 @@ pointer-events:none;
 <div id="container"></div>
 <div class="glow"></div>
 <canvas id="heart-particles-bg"></canvas>
+ <audio id="bgMusic" loop>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
 <div id="envelopeContainer">
   <div id="envelope" onclick="openEnvelope()">
     <div class="back"></div>
@@ -421,6 +424,7 @@ function showMessages() {
 
 function openEnvelope(){
   startHeartField();
+  document.getElementById('bgMusic').play().catch(()=>{});
   const envelope = document.getElementById("envelope");
   const container = document.getElementById("envelopeContainer");
   const hint = document.getElementById("bottomHint");

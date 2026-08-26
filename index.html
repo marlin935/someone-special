@@ -499,7 +499,8 @@ card.style.opacity="1";
 typeLines(document.getElementById("typing5"), [
   "I love how passionate you are about writing,",
  "and I’d honestly love to read more of your work",
- "I really love the way you write. It feels like you put your feelings",
+ "I really love the way you write.",
+ "It feels like you put your feelings",
  "into your words.I don’t know how to explain it,",
  "but there’s something really special about your writing"
 ]);
@@ -517,13 +518,9 @@ function showGnm() {
         <source src="media_1784013409265.mp4" type="video/mp4">
       </video>
 
-      <h1>Something I Admire ❤️</h1>
+      <h1>Something bothers me❤️</h1>
 
-      <p style="margin-top:20px">
-       I worry sometimes that I might be bothering or disturbing you. I'm so sorry if I did<br>
-       and I'll be careful not to do it again well!
-      </p>
-
+      <p style="margin-top:20px" id="typing6"></p>
       <button onclick="showQuestion()">
         Continue ❤️
       </button>
@@ -531,8 +528,14 @@ function showGnm() {
 
     card.style.opacity = "1";
 
-  }, 700);
+    typeLines(document.getElementById("typing6"), [
+     "I worry sometimes that I might be bothering or disturbing you.",
+     "I'm so sorry if I did, and I'll be careful not to do it again"
+    ]);
+
+  },700);
 }
+
 function showQuestion() {
   card.style.opacity = "0";
 

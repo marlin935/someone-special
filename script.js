@@ -10,7 +10,7 @@ let time = 0;
 const currentTheme = 'cosmic';
 
 const particleCount = 10000;
-const displayName = 'Nethuu❤️'; // change the name shown here
+const displayName = 'Nethu❤️'; // change the name shown here
 
 const themes = {
   cosmic: {
@@ -133,7 +133,7 @@ function init() {
   controls.enableDamping = true;
   controls.dampingFactor = 0.04;
   controls.rotateSpeed = 1.0;
-  controls.minDistance = 30;
+  controls.minDistance = 40;
   controls.maxDistance = 300;
   controls.enablePan = false;
   controls.autoRotate = true;
@@ -282,7 +282,7 @@ function animateParticles() {
   const particleSizes = particles.geometry.attributes.size.array;
   const disintegrationOffsets = particles.geometry.attributes.disintegrationOffset.array;
 
-  const disintegrationCycleTime = 15.0;
+  const disintegrationCycleTime = 10.0;
   const shapeIndex = Math.floor((time * 0.6) / disintegrationCycleTime) % 2;
   const homePositions = shapeIndex === 0 ? heartPositions : textPositions;
 

@@ -470,7 +470,7 @@ function startLove() {
 
         typeLines(document.getElementById("typing4"), [
       "I really love hearing about your day,",
-      " no matter what happened",
+      " no matter what happened.",
       "Even the little random things or the bad things,",
       "I just love listening to you and knowing how your day went.",
       "Honestly talking to you always makes my day a little better."
@@ -487,14 +487,8 @@ function startLove() {
           <source src="poetry.mp4" type="video/mp4">
           </video>
 
-         <h1>Something I Admire ❤️</h1>
-         <p style="margin-top:20px">
-
-        I love how passionate you are about writing.<br>
-        I'd honestly love to read your poetry sometime,<br>
-        if you're comfortable sharing. ✨
-          </p>
-
+                 <h1>Something I Admire ❤️</h1>
+         <p style="margin-top:20px" id="typing5"></p>
           <button onclick="showGnm()">
            Continue ❤️
             </button>
@@ -502,9 +496,18 @@ function startLove() {
 
 card.style.opacity="1";
 
+typeLines(document.getElementById("typing5"), [
+  "I love how passionate you are about writing,",
+ "and I’d honestly love to read more of your work",
+ "I really love the way you write. It feels like you put your feelings",
+ "into your words.I don’t know how to explain it,",
+ "but there’s something really special about your writing"
+]);
+
  },700);
 }
-  function showGnm() {
+  
+function showGnm() {
   card.style.opacity = "0";
 
   setTimeout(() => {
